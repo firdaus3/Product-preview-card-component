@@ -1,0 +1,168 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-heading: "Fraunces", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  --border-radius: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-body);
+  color: var(--dark-grayish-blue);
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  color: var(--very-dark-blue);
+  line-height: 1;
+  margin-bottom: 1.65rem;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+
+img {
+  width: 100%;
+}
+
+picture {
+  line-height: 0;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-bottom: 2.4rem;
+  }
+
+  p {
+    margin-bottom: 1.9rem;
+  }
+}
+
+/* icon */
+.icon {
+  width: 1.6rem;
+  margin-right: 1.5rem;
+}
+
+/* button */
+.btn {
+  padding: 1.4rem;
+  border-radius: var(--border-radius);
+  border: none;
+  width: 100%;
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn--green {
+  background-color: var(--dark-cyan);
+}
+
+.btn--green:hover {
+  background-color: hsl(156, 42%, 18%);
+}
+
+/* grid */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* price */
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.price--discount {
+  font-family: var(--font-heading);
+  color: var(--dark-cyan);
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.price--original {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .price {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* card */
+.card {
+  background-color: var(--white);
+  max-width: 34.3rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.card__content {
+  padding: 2.4rem;
+}
+
+.card__category {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 60rem;
+  }
+
+  .card__content {
+    padding: 3.2rem;
+  }
+
+  .card__category {
+    margin-bottom: 2rem;
+  }
+}
